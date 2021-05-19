@@ -35,7 +35,7 @@ func main() {
 	mgr.Add("f4")
 	go func() { f4(); mgr.Remove("f4") }()
 
-	// emulation of end of programm
+	// emulation of end of program
 	terminateTimeout := 100 * time.Millisecond
 	ctx, cancel := context.WithTimeout(context.Background(), terminateTimeout)
 	defer cancel()
